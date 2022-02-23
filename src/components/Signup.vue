@@ -40,6 +40,9 @@ export default {
 
       if(parseInt(result.status) == 200) {
         document.getElementById("success").innerHTML = result.data.message;
+        setTimeout(() => {
+                this.$router.push({name:"Signup"})    
+            }, 3000);
       }
     }
   }

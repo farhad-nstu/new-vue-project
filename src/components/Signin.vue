@@ -28,7 +28,11 @@ export default {
       })
 
       if(parseInt(result.status) == 200) {
-        document.getElementById("success").innerHTML = result.data.message;
+
+        localStorage.setItem("user", result.data.token);
+            setTimeout(() => {
+                this.$router.push({name:"Home"})    
+            }, 3000);
       }
     }
   }
